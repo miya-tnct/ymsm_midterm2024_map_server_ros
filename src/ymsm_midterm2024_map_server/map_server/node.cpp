@@ -11,7 +11,7 @@ Node::Node() :
   ros::NodeHandle(),
   point_min_({0.0, -2.0}),
   point_max_({5.0, +2.0}),
-  wall_thickness_(0.5),
+  wall_thickness_(0.0),
   dissolution_(10.0),
   map_publisher_(this->advertise<nav_msgs::OccupancyGrid>("map", 1, true))
 {
