@@ -1,3 +1,6 @@
+#include "ros/init.h"
+#include "ros/spinner.h"
+
 #include "ymsm_midterm2024_map_server/map_server/node.h"
 
 int main(int argc, char **argv)
