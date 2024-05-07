@@ -1,6 +1,8 @@
 #ifndef YMSM_MIDTERM2024_MAP_SERVER_MAP_SERVER_NODE_H_
 #define YMSM_MIDTERM2024_MAP_SERVER_MAP_SERVER_NODE_H_
 
+#include <cstdint>
+
 #include "ros/ros.h"
 
 namespace ymsm_midterm2024_map_server::map_server
@@ -12,13 +14,8 @@ public:
   Node();
 
 private:
-  struct Point {
-    double x, y;
-  } point_min_, point_max_;
-
-  double wall_thickness_;
-
-  double dissolution_;
+  ros::NodeHandle pnh_;
+  std::uint32_t seq_;
 
   void publish_map();
 
